@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
+
   baseurl = 'http://127.0.0.1:8000/api/'
 
   constructor( private http :HttpClient) { }
@@ -27,16 +28,17 @@ export class AuthService {
   }
 
   public isloggedin(){
-    if(localStorage.getItem('authToken')){
+    if(localStorage.getItem('authToken') ){
       return true
     }else{
+      this.permission='guest'
       return false
     }
   }
 
   public logout(){
     localStorage.removeItem('authToken');
-    this.isloggedin()
+   return this.isloggedin()
   }
 
   

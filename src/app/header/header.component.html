@@ -1,1 +1,4 @@
-<p>header works!</p>
+<div class="container-fluid bg-primary">
+<button class=" btn btn-outline-dark"  *ngIf="user" (click)="logout()">logout </button >
+<button class=" btn btn-outline-dark" routerLink="/login" *ngIf="!user">login</button >
+</div>

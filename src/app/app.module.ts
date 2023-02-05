@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ErrorComponent } from './error/error.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
