@@ -1,4 +1,5 @@
-<div class="container-fluid bg-primary">
+<div class="container-fluid shadow">
 <button class=" btn btn-outline-dark"  *ngIf="user" (click)="logout()">logout </button >
 <button class=" btn btn-outline-dark" routerLink="/login" *ngIf="!user">login</button >
+    <a routerLink="/admindashboard" *ngIf="permission == 'admin'"> DashBoard</a>
 </div>

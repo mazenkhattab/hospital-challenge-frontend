@@ -9,10 +9,12 @@ import { AuthService } from '../auth.service';
 export class HeaderComponent implements OnInit {
 
   constructor(private auth:AuthService) { }
-user:boolean = false
+user:boolean = false;
+permission = 'guest';
   ngOnInit(): void {
     if(this.auth.isloggedin()){
       this.user=true
+      this.permission=this.auth.permission
     }
   }
   logout(){
